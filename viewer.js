@@ -5642,10 +5642,12 @@
 
       var pdfjsLib;
 
+      console.log("window", window);
+
       if (typeof window !== "undefined" && window["pdfjs-dist/build/pdf"]) {
         pdfjsLib = window["pdfjs-dist/build/pdf"];
       } else {
-        pdfjsLib = require("./pdf.js");
+        pdfjsLib = require("../build/pdf.js");
       }
 
       module.exports = pdfjsLib;
